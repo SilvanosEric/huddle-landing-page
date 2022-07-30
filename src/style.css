@@ -1,5 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .hero__title {
+    font-size: theme("fontSize.2xl");
+  }
+
+  .hero__copy {
+    --flow-space: 1rem;
+  }
+
+  .btn {
+    background-color: white;
+    color: theme("colors.p-violet");
+    display: inline-flex;
+    font-size: theme("fontSize.sm");
+    padding-inline: theme("padding.20");
+    padding-block: theme("padding.3");
+    border-radius: theme("borderRadius.full");
+  }
+
+  .hero__btn {
+    --flow-space: 1.75rem;
+  }
+
+  .social-icons-figure {
+    border: solid 0.0625rem;
+    border-radius: theme("borderRadius.full");
+    width: theme("width.8");
+    aspect-ratio: 1 / 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-icons-figure > i {
+    font-style: normal;
+  }
+}
+
+@layer utilities {
+  .flow > :not(:first-child) {
+    margin-top: var(--flow-space, 1.5rem);
+  }
+}
+
+body {
+  --flow-space: 4rem;
+  background-image: url(images/bg-mobile.svg);
+  background-repeat: no-repeat;
+}
+
+main {
+  --flow-space: 3.5rem;
+}
