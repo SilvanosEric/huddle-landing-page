@@ -62,6 +62,7 @@
   .hero__btn:hover,
   .hero__btn:focus-visible {
     background-color: theme("colors.p-soft-magenta");
+    color: white;
   }
 
   .hero__btn:active {
