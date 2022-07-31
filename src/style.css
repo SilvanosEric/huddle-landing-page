@@ -59,6 +59,17 @@
     filter: drop-shadow(0 0.1rem 0.25rem rgba(0 0 0 / 0.5));
   }
 
+  .hero__btn:hover,
+  .hero__btn:focus-visible {
+    background-color: theme("colors.p-soft-magenta");
+  }
+
+  .hero__btn:active {
+    position: relative;
+    top: 0.5rem;
+    filter: none;
+  }
+
   @media (min-width: theme("screens.xl")) {
     .hero__btn {
       padding-inline: theme("padding.16");
@@ -76,6 +87,12 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+  }
+
+  .social-icons-figure:hover,
+  .social-icons-figure:focus-visible {
+    color: theme("colors.p-soft-magenta");
   }
 
   @media (min-width: theme("screens.xl")) {
