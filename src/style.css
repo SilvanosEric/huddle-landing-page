@@ -126,7 +126,7 @@ body {
   background-repeat: no-repeat;
 }
 
-@media (min-width: theme("screens.xl")) {
+@media (min-width: theme("screens.md")) {
   body {
     background-image: url(images/bg-desktop.svg);
   }
@@ -145,4 +145,10 @@ main {
 body > * {
   max-width: theme("maxWidth.7xl");
   margin-inline: auto;
+}
+
+@media (max-width: theme("screens.xl")) {
+  body > * {
+    max-width: theme("maxWidth.3xl");
+  }
 }
