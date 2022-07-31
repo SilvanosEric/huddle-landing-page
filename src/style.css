@@ -5,12 +5,43 @@
 @tailwind utilities;
 
 @layer components {
+  .logo__figure {
+    max-width: theme("width.32");
+  }
+
+  @media (min-width: theme("screens.xl")) {
+    .logo__figure {
+      max-width: theme("width.52");
+    }
+  }
+
+  @media (min-width: theme("screens.xl")) {
+    .hero {
+      display: grid;
+      grid-template-columns: 56% 1fr;
+      gap: theme("gap.6");
+    }
+  }
+
+  @media (min-width: theme("screens.xl")) {
+    .hero__text {
+      --flow-space: 3rem;
+    }
+  }
+
   .hero__title {
     font-size: theme("fontSize.2xl");
   }
 
+  @media (min-width: theme("screens.xl")) {
+    .hero__title {
+      font-size: theme("fontSize.4xl");
+    }
+  }
+
   .hero__copy {
     --flow-space: 1rem;
+    font-size: theme("fontSize.lg");
   }
 
   .btn {
@@ -25,6 +56,16 @@
 
   .hero__btn {
     --flow-space: 1.75rem;
+    filter: drop-shadow(0 0.1rem 0.25rem rgba(0 0 0 / 0.5));
+  }
+
+  @media (min-width: theme("screens.xl")) {
+    .hero__btn {
+      padding-inline: theme("padding.16");
+      padding-block: theme("padding[3.5]");
+      font-size: theme("fontSize.lg");
+      filter: drop-shadow(0 0.15rem 0.35rem rgba(0 0 0 / 0.75));
+    }
   }
 
   .social-icons-figure {
@@ -35,6 +76,20 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+  }
+
+  @media (min-width: theme("screens.xl")) {
+    .social-icons-figure {
+      width: theme("width.10");
+    }
+  }
+
+  @media (min-width: theme("screens.xl")) {
+    .social-icons {
+      margin-left: auto;
+      position: relative;
+      bottom: 2rem;
+    }
   }
 
   .social-icons-figure > i {
@@ -54,6 +109,23 @@ body {
   background-repeat: no-repeat;
 }
 
+@media (min-width: theme("screens.xl")) {
+  body {
+    background-image: url(images/bg-desktop.svg);
+  }
+}
+
 main {
   --flow-space: 3.5rem;
+}
+
+@media (min-width: theme("screens.xl")) {
+  main {
+    --flow-space: 5.5rem;
+  }
+}
+
+body > * {
+  max-width: theme("maxWidth.7xl");
+  margin-inline: auto;
 }
